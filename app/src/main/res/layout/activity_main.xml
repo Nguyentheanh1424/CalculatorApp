@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <TextView
+            android:id="@+id/displayText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textAlignment="textEnd"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout style="@style/buttonRow">
+        <Button style="@style/buttonNumber" android:textColor="@color/red" android:onClick="clearEntry" android:text="CE"/>
+        <Button style="@style/buttonNumber" android:textColor="@color/red" android:onClick="clear" android:text="C" />
+        <Button style="@style/buttonNumber" android:textColor="@color/red" android:onClick="backSpace" android:text="⌫"/>
+        <Button style="@style/buttonOperator" android:text="/" android:onClick="operationAction"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/buttonRow">
+        <Button style="@style/buttonNumber" android:text="7" android:onClick="numberAction"/>
+        <Button style="@style/buttonNumber" android:text="8" android:onClick="numberAction"/>
+        <Button style="@style/buttonNumber" android:text="9" android:onClick="numberAction"/>
+        <Button style="@style/buttonOperator" android:text="x" android:onClick="operationAction"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/buttonRow">
+        <Button style="@style/buttonNumber" android:text="4" android:onClick="numberAction"/>
+        <Button style="@style/buttonNumber" android:text="5" android:onClick="numberAction"/>
+        <Button style="@style/buttonNumber" android:text="6" android:onClick="numberAction"/>
+        <Button style="@style/buttonOperator" android:text="-" android:onClick="operationAction"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/buttonRow">
+        <Button style="@style/buttonNumber" android:text="1" android:onClick="numberAction"/>
+        <Button style="@style/buttonNumber" android:text="2" android:onClick="numberAction"/>
+        <Button style="@style/buttonNumber" android:text="3" android:onClick="numberAction"/>
+        <Button style="@style/buttonOperator" android:text="+" android:onClick="operationAction"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/buttonRow">
+        <Button style="@style/buttonNumber" android:onClick="signChange" android:text="±"/>
+        <Button style="@style/buttonNumber" android:text="0" android:onClick="numberAction"/>
+        <Button style="@style/buttonNumber" android:text="." android:onClick="dotAction"/>
+        <Button style="@style/buttonOperator" android:textColor="@color/blue" android:textStyle="bold" android:textSize="50sp" android:onClick="displayResult" android:text="="/>
+    </LinearLayout>
+
+</LinearLayout>
